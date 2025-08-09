@@ -65,5 +65,5 @@ Example:
 2025-08-09 16:03:45,737 - INFO - Command: 'show sales in pie chart' | Intent: show_data | Entities: {'metric': ['Sales'], 'dimension': ['Region'], 'aggregation_type': 'sum', 'chart_type': 'pie', 'filter_column': None, 'filter_value': None, 'sort_column': None, 'sort_order': 'ascending'}<br>
 2025-08-09 16:03:45,884 - INFO - Command processed successfully in 0.182s<br>
 ✅ Generated pie chart showing sum of Sales by Region (⏱️ 0.19s)<br>
-<img src="Sample_output_2.png>
+<img src="Sample_output_2.png">
 
