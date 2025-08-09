@@ -66,4 +66,15 @@ Example:
 2025-08-09 16:03:45,884 - INFO - Command processed successfully in 0.182s<br>
 ✅ Generated pie chart showing sum of Sales by Region (⏱️ 0.19s)<br>
 <img src="Sample_output_2.png">
+<h5>Numerical Calculations</h5>
+Computes metrics like sum, average, max, min, median, count, and standard deviation.<br>
+Example:
+2025-08-09 16:03:05,723 - INFO - ✅ google recognition successful<br>
+2025-08-09 16:03:05,742 - INFO - Recognition successful in 5.40s: 'average profit'<br>
+📝 Processing: 'average profit'<br>
+2025-08-09 16:03:05,778 - INFO - Command: 'average profit' | Intent: calculate_data | Entities: {'metric': ['Profit'], 'dimension': [], 'aggregation_type': 'mean', 'chart_type': None, 'filter_column': None, 'filter_value': None, 'sort_column': None, 'sort_order': 'ascending'}<br>
+2025-08-09 16:03:05,783 - INFO - Command processed successfully in 0.037s<br>
+✅ The mean of Profit is 28.66 (⏱️ 0.04s)<br>
+🔢 Result: 28.66<br>
+
 
