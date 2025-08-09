@@ -2,7 +2,7 @@
 #AI-powered voice-enabled data analytics tool for instant insights, calculations, and visualizations via speech or text.
 
 An AI-powered platform that lets you analyze datasets using voice commands or text input, providing instant calculations, filtering, sorting, and interactive visualizations — all through a modern Streamlit web interface or CLI.
-<h3>features</h3>
+<h3>Features</h3>
 <h5>Advanced Voice Processing</h5>
 <ul>
   <li>Multi-Engine Speech Recognition with automatic fallback (Google, Sphinx, Wit.ai, Azure)</li>
@@ -55,5 +55,6 @@ Speak or type your commands (e.g., "Show total sales by region as bar chart").
 python main.py<br>
 Speak your query directly (e.g., "Calculate average profit").
 
+<h3>Sample Output</h3>
 
 
