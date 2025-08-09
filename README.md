@@ -55,6 +55,15 @@ Speak or type your commands (e.g., "Show total sales by region as bar chart").
 python main.py<br>
 Speak your query directly (e.g., "Calculate average profit").
 
-<h3>Sample Output</h3>
-
+<h3>Output</h3>
+<h5>Interactive Visualizations</h5>
+Generated using Plotly with auto-selected chart types (Bar, Pie, Line, Scatter, Histogram).
+Example:
+2025-08-09 16:03:45,684 - INFO - ✅ google recognition successful<br>
+2025-08-09 16:03:45,700 - INFO - Recognition successful in 5.73s: 'show sales in pie chart'<br>
+📝 Processing: 'show sales in pie chart'<br>
+2025-08-09 16:03:45,737 - INFO - Command: 'show sales in pie chart' | Intent: show_data | Entities: {'metric': ['Sales'], 'dimension': ['Region'], 'aggregation_type': 'sum', 'chart_type': 'pie', 'filter_column': None, 'filter_value': None, 'sort_column': None, 'sort_order': 'ascending'}<br>
+2025-08-09 16:03:45,884 - INFO - Command processed successfully in 0.182s<br>
+✅ Generated pie chart showing sum of Sales by Region (⏱️ 0.19s)<br>
+<img src="Sample output2.png>
 
