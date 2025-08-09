@@ -31,4 +31,29 @@ An AI-powered platform that lets you analyze datasets using voice commands or te
 <li>Comprehensive Error Handling</li>
 <li>CLI and Web Modes for maximum flexibility</li>
 </ul>
+<h3>Installation</h3>
+<h5>Clone the repository:</h5>
+git clone https://github.com/yourusername/vision-assistant.git<br>
+cd vision-assistant<br>
+<h5>create Virtual Environment</h5>
+python -m venv venv<br>
+source venv/bin/activate <br>  # macOS/Linux
+venv\Scripts\activate <br>     # Windows
+
+<h5>Install dependencies: </h5>
+pip install -r requirements.txt<br>
+<h5>Set dataset path in config.yaml</h5>
+dataset_path: "your_dataset.csv"
+<h5>Run the application:</h5>
+python main.py<br>
+
+<h3>Usage</h3>
+<h5>1. Web Interface (Streamlit)</h5>
+streamlit run main.py<br>
+Speak or type your commands (e.g., "Show total sales by region as bar chart").
+<h5>2.CLI Mode</h5>
+python main.py<br>
+Speak your query directly (e.g., "Calculate average profit").
+
+
 
