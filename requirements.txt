@@ -1,0 +1,64 @@
+# Voice-Controlled Data Analytics Platform
+# Core Dependencies
+
+# Data Analysis and Visualization
+pandas>=1.5.0
+plotly>=5.15.0
+numpy>=1.24.0
+
+# Natural Language Processing
+spacy>=3.6.0
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.6.0/en_core_web_sm-3.6.0-py3-none-any.whl
+
+# Speech Recognition
+SpeechRecognition>=3.10.0
+pyaudio>=0.2.11
+
+# Web Interface
+streamlit>=1.25.0
+
+# Configuration Management
+PyYAML>=6.0
+
+# Logging and Utilities
+colorlog>=6.7.0
+
+# Optional: Advanced Speech Recognition
+# pocketsphinx>=5.0.0  # Offline speech recognition
+# azure-cognitiveservices-speech>=1.30.0  # Azure Speech Services
+# wit>=6.0.0  # Wit.ai integration
+
+# Optional: Enhanced NLP Features
+# nltk>=3.8  # Additional NLP capabilities
+# transformers>=4.30.0  # Hugging Face transformers for advanced NLP
+
+# Optional: Performance Optimization
+# numba>=0.57.0  # JIT compilation for numerical operations
+# dask>=2023.6.0  # Parallel computing
+
+# Optional: Additional File Format Support
+# openpyxl>=3.1.0  # Excel file support
+# xlrd>=2.0.0  # Legacy Excel format support
+
+# Development Dependencies (optional)
+# pytest>=7.4.0  # Testing framework
+# black>=23.0.0  # Code formatting
+# flake8>=6.0.0  # Linting
+# mypy>=1.4.0  # Type checking
+
+# System Dependencies Notes:
+# 
+# For Linux (Ubuntu/Debian):
+# sudo apt-get update
+# sudo apt-get install python3-dev portaudio19-dev
+# 
+# For macOS:
+# brew install portaudio
+# 
+# For Windows:
+# No additional system dependencies required
+# PyAudio wheel should install automatically
+# 
+# Installation Commands:
+# pip install -r requirements.txt
+# python -m spacy download en_core_web_sm

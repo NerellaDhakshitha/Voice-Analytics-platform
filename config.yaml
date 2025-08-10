@@ -1,0 +1,162 @@
+
+# Voice-Controlled Data Analytics Platform Configuration
+
+# Dataset Configuration
+dataset_path: "C:\\Users\\nerella.rohith\\OneDrive\\Desktop\\ai project\\dataset\\Sample - Superstore.csv"  # Path to your CSV dataset
+backup_dataset_paths:  # Fallback paths if primary fails
+  - "data/sales_data.csv"
+  - "backup/data.csv"
+
+# Speech Recognition Configuration
+speech_recognition:
+  timeout_seconds: 10          # How long to wait for speech
+  phrase_duration: 8           # Maximum phrase length in seconds
+  energy_threshold: 4000       # Microphone sensitivity (lower = more sensitive)
+  dynamic_energy_threshold: true  # Auto-adjust for noise
+  pause_threshold: 0.8         # Seconds of silence before ending phrase
+  noise_duration: 1.0          # Seconds to measure ambient noise
+  language: "en-US"            # Speech recognition language
+  show_all_results: false      # Show alternative recognition results
+  
+  # Recognition engines to use (in order of preference)
+  recognition_engines:
+    - "google"      # Google Speech Recognition (online)
+    - "sphinx"      # PocketSphinx (offline) - requires installation
+  
+  # API Keys for premium recognition services (optional)
+  # wit_api_key: "your_wit_ai_api_key_here"
+  # azure_key: "your_azure_speech_key_here"
+  # azure_region: "your_azure_region_here"
+
+# Data Analysis Configuration
+data_analysis:
+  # Default aggregation functions
+  default_aggregation: "sum"
+  
+  # Chart configuration
+  charts:
+    default_theme: "plotly_white"  # plotly_white, plotly_dark, plotly, simple_white
+    default_height: 500
+    animation_duration: 500
+    
+  # Performance settings
+  max_data_points: 1000         # Maximum points to display in charts
+  cache_results: true           # Cache query results for performance
+  
+  # Column mappings (customize for your dataset)
+  column_mappings:
+    # Metrics (numerical columns)
+    metrics:
+      sales: "Sales"
+      revenue: "Sales"
+      profit: "Profit"
+      earnings: "Profit"
+      quantity: "Quantity"
+      qty: "Quantity"
+      units: "Quantity"
+    
+    # Dimensions (categorical columns)
+    dimensions:
+      region: "Region"
+      area: "Region"
+      category: "Category"
+      type: "Category"
+      segment: "Segment"
+      market: "Segment"
+      state: "State"
+      location: "State"
+
+# Web Interface Configuration (Streamlit)
+web_interface:
+  page_title: "Voice Analytics Platform"
+  page_icon: "🎤📊"
+  layout: "wide"
+  theme: "light"  # light, dark
+  
+  # Session configuration
+  max_history: 20               # Maximum commands to keep in history
+  auto_refresh: false           # Auto-refresh data
+  
+  # UI Features
+  features:
+    voice_input: true
+    text_input: true
+    example_commands: true
+    session_stats: true
+    data_preview: true
+    export_results: false       # Enable CSV export of results
+
+# Logging Configuration
+logging:
+  level: "INFO"                 # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  log_to_file: true
+  log_file: "voice_analytics.log"
+  max_log_size: "10MB"
+  backup_count: 5
+  
+  # Console output
+  console_output: true
+  colored_output: true          # Colored console output
+
+# Performance Optimization
+performance:
+  multiprocessing: false        # Enable multiprocessing for heavy operations
+  memory_optimization: true     # Optimize memory usage
+  lazy_loading: true            # Load data only when needed
+  
+  # Cache settings
+  cache_enabled: true
+  cache_size: 100               # Number of queries to cache
+  cache_ttl: 300                # Cache time-to-live in seconds
+
+# Security Settings (for production deployment)
+security:
+  enable_auth: false            # Enable authentication
+  allowed_file_types: [".csv", ".xlsx", ".json"]
+  max_file_size: "100MB"
+  
+  # Rate limiting
+  rate_limit_enabled: false
+  max_requests_per_minute: 60
+
+# Development Settings
+development:
+  debug_mode: false             # Enable debug features
+  show_processing_time: true    # Show query processing time
+  verbose_logging: false        # Extra detailed logging
+  
+  # Testing
+  mock_speech_recognition: false  # Use mock speech for testing
+  test_data_generation: false   # Generate test data if dataset missing
+
+# Custom Extensions (for advanced users)
+extensions:
+  custom_intents: []            # Custom intent definitions
+  custom_entities: []           # Custom entity types
+  plugin_directory: "plugins/"  # Directory for custom plugins
+  
+# Environment-specific overrides
+environments:
+  production:
+    logging:
+      level: "WARNING"
+    performance:
+      cache_enabled: true
+      multiprocessing: true
+    security:
+      enable_auth: true
+      rate_limit_enabled: true
+      
+  development:
+    logging:
+      level: "DEBUG"
+      verbose_logging: true
+    development:
+      debug_mode: true
+      mock_speech_recognition: false
+
+# Data Quality Settings
+data_quality:
+  handle_missing_values: true   # Auto-handle missing data
+  data_validation: true         # Validate data integrity
+  auto_type_inference: true     # Automatically infer column types
